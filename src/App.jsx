@@ -14,7 +14,7 @@ export default function App() {
 
   // Initialize socket and user on mount
   useEffect(() => {
-    const newSocket = io(import.meta.env.VITE_BACKEND_URL || 'http://localhost:3001', {
+   const newSocket = io('https://debate-arena-backend-production-5074.up.railway.app', {
       reconnection: true,
       reconnectionDelay: 1000,
       reconnectionDelayMax: 5000,
