@@ -17,7 +17,6 @@ export default function HomeScreen({ onSelectTopic, userId }) {
     const fetchUserStats = async () => {
       if (!userId) return;
       try {
-        const { data, error } = await supabase
           .from('debates')
           .select('*')
           .or(`user1_id.eq.${userId},user2_id.eq.${userId}`);
