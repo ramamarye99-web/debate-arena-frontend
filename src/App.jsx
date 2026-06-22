@@ -4,11 +4,6 @@ import HomeScreen from './components/HomeScreen';
 import DebateRoom from './components/DebateRoom';
 import './App.css';
 
-const supabase = createClient(
-  import.meta.env.VITE_SUPABASE_URL,
-  import.meta.env.VITE_SUPABASE_ANON_KEY
-);
-
 export default function App() {
   const [screen, setScreen] = useState('home'); // 'home' or 'debate'
   const [socket, setSocket] = useState(null);
