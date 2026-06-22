@@ -16,11 +16,7 @@ export default function HomeScreen({ onSelectTopic, userId }) {
   useEffect(() => {
     const fetchUserStats = async () => {
       if (!userId) return;
-      try {
-          .from('debates')
-          .select('*')
-          .or(`user1_id.eq.${userId},user2_id.eq.${userId}`);
-        if (data) setUserDebates(data.length);
+    
       } catch (err) {
         console.error('Error fetching user stats:', err);
       }
