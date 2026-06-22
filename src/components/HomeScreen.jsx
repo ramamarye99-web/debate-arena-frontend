@@ -1,10 +1,5 @@
 import React, { useState, useEffect } from 'react';
 
-const supabase = createClient(
-  import.meta.env.VITE_SUPABASE_URL,
-  import.meta.env.VITE_SUPABASE_ANON_KEY
-);
-
 const TOPICS = [
   { id: 1, name: 'AI is better than humans', debaters: 342, debates: 1200 },
   { id: 2, name: 'Cryptocurrency has real value', debaters: 218, debates: 856 },
